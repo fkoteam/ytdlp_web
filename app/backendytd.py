@@ -326,5 +326,5 @@ if __name__ == "__main__":
         # sys.exit(1) # Considera salir si ffmpeg es esencial
 
     from waitress import serve
-    app.logger.info("Iniciando servidor Flask con Waitress en 0.0.0.0:8080")
-    serve(app, host="0.0.0.0", port=8080)
+    app.logger.info("Iniciando servidor Flask con Waitress en 0.0.0.0:8081")
+    serve(app, host="0.0.0.0", port=8081)
