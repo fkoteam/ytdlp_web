@@ -9,7 +9,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Instala ffmpeg, necesario para yt-dlp para extraer audio y post-procesamiento
-RUN apt-get update && apt-get install -y ffmpeg tor && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 # Copia el resto de los archivos de la aplicación
