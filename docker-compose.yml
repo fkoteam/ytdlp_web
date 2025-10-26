@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  spotspof:
+    build: .
+    ports:
+      - "5000:5000"
+      - "8080:8080"
+    environment:
+      - USERNAME=miusuario
+      - PASSWORD=micontraseña
