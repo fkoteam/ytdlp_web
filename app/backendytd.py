@@ -56,7 +56,7 @@ def stream_video():
     # Si los parámetros contienen "-o -", se envía como flujo
     if "-o -" in params:
         process = subprocess.Popen(
-            ["/var/www/html/web/./yt-dlp_linux"] + params.split() + [url],
+            ["yt-dlp"] + params.split() + [url],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             bufsize=10**6
@@ -80,7 +80,7 @@ def stream_video():
     # Si no contiene "-o -", devuelve la salida completa en texto
     else:
         process = subprocess.Popen(
-            ["/var/www/html/web/./yt-dlp_linux"] + params.split() ,
+            ["yt-dlp"] + params.split() ,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
         )
