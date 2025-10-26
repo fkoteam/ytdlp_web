@@ -16,7 +16,6 @@ RUN chmod +x /entrypoint.sh
 COPY app/ .
 
 # Expone el puerto en el que se ejecutará la aplicación Flask
-EXPOSE 5000
 EXPOSE 8080
 
 # Define el comando para ejecutar la aplicación cuando se inicie el contenedor
